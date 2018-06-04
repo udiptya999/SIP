@@ -1,0 +1,397 @@
+<html>
+
+<head>
+  <title>Apply</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="description" content="ECELL DTU 2018" />
+  <meta name="keywords" content="ecell, startup, dtu" />
+  <meta name="author" content="Umang Chauhan" />
+  
+    <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- 
+  Default Theme Style 
+  You can change the style.css (default color purple) to one of these styles
+  -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background: #efefef repeat;">
+    
+    <div id="fh5co-page unauthenticated">
+    <section id="fh5co-header" style="background: black;margin-top: -37px;">
+      <div class="container">
+        <nav role="navigation">
+        
+          
+          <div class="col-sm-4" style="margin-top: -15px;padding:0;">
+            <a href="#"><img id="home-logo" width="120" src="images/ecell.png" /></a>
+          </div>
+          <div class="col-sm-4">
+          <ul class="pull-left left-menu">
+          <!--  <li><a href="about.html"></a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="pastMembers.html">Past Members</a></li>
+            <li><a href="initiatives.html">Initiatives</a></li> -->
+          </ul>
+          </div>
+          <div class="col-sm-4" style="margin-top: -28px;margin-bottom: 12px;">
+          <ul class="pull-right right-menu" >
+            <li><div class="userAuth unauthenticated pull-right" >
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Register</button>
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Login</button>
+                </div></li>
+              <li>  <div class="userAuth authenticated pull-right">
+                  <span class="user-info">
+                    <img src="./user.svg" alt="User" class="rounded-circle">
+                  </span>
+                  <button type="button" class="btn btn-success" id="logout">Logout</button>
+                </div></li>
+            <!-- <li><a href="login.html">Login</a></li>
+            <li class="fh5co-cta-btn"><a href="signup.html">Sign up</a></li> -->
+          </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="Register" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="registerForm" method="POST">
+          <div class="modal-header">
+            <h4 class="modal-title" id="registerModalLabel">Register</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">First Name:</label>
+              <input type="text" class="form-control" id="registerFirstName">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">Last Name:</label>
+              <input type="text" class="form-control" id="registerLastName">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">Email:</label>
+              <input type="text" class="form-control" id="registerEmail">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="control-label">Password:</label>
+              <input type="password" class="form-control" id="registerPassword">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="control-label">Confirm Password:</label>
+              <input type="password" class="form-control" id="registerConfirmPassword">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id="doRegister">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="loginForm" method="POST">
+          <div class="modal-header">
+            <h4 class="modal-title" id="loginModalLabel">Login</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">Email:</label>
+              <input type="text" class="form-control" id="loginEmail">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="control-label">Password:</label>
+              <input type="password" class="form-control" id="loginPassword">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id="doLogin">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="Message" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="messageModalLabel">Message</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-footer">
+          <div class="pre-auth">
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+            <span class="">
+              <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Register</button>
+              <button type="submit" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login</button>
+            </span>
+          </div>
+          <div class="post-auth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="userAuth authenticated">
+      <div class="md-form" style="padding-top: 10%;padding-left: 3%;padding-right: 3%;">
+    <div class="panel panel-default flat-form" id="sm-form1">
+      <div class="panel-heading">
+        <div class="row">
+              <div class="col-xs-9">
+                <h1 class="blue-text" style="margin-bottom: 2px;">Apply for a Specific Internship</h1>
+              </div>
+              <div class="col-xs-3 text-right form-top-icon"><i class="icon-bubbles icons"></i></div>
+            </div>
+      </div>
+      <form method="post" action="#">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <div class="input-group"> <span class="input-group-addon"><i class="icon-user icons" aria-hidden="true"></i></span>
+                <input class="form-control" name="name" id="name" placeholder="Enter your Name" type="text">
+              </div>
+            </div>
+            <div class="col-md-6 form-group">
+              <div class="input-group"> <span class="input-group-addon"><i class="icon-envelope icons" aria-hidden="true"></i></span>
+                <input class="form-control" name="email" id="email" placeholder="Enter your Email" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-sm-3">
+              <div class="input-group"> <span class="input-group-addon"><i class="icon-pencil icons" aria-hidden="true"></i></span>
+                <input class="form-control" name="name" id="branch" placeholder="Enter Branch" type="text">
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="input-group"> <span class="input-group-addon"><i class="icon-phone icons" aria-hidden="true"></i></span>
+                <input class="form-control" name="name" id="mobile" placeholder="Enter Mobile No." type="text">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="input-group"> <span class="input-group-addon"><i class="icon-pencil icons" aria-hidden="true"></i></span>
+                <input class="form-control" name="name" id="rollno" placeholder="Enter Roll No DTU/..." type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="Company">Select Company</label>
+            <select class="form-control" id="Company">
+              <option>Social Vidhyarthi</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="Profile">Select Profile</label>
+            <select class="form-control" id="Profile">
+              <option>Web Development</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="Skills">Enter Skills</label>
+            <textarea class="form-control" id="Skills" rows="1"></textarea>
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="address">Enter Address</label>
+            <textarea class="form-control" id="address" rows="1"></textarea>
+          </div>
+          <div class="row form-group">
+            <div class="col-sm-12">
+              <div class="input-group input-group-textarea"> <span class="input-group-addon"><i class="icon-note icons" aria-hidden="true"></i></span>
+                <textarea class="form-control" rows="5" placeholder="Enter Message here"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer footer-buttons">
+          <div class="text-right">
+            <button type="submit" class="btn btn-danger">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="userAuth unauthenticated pull-right">
+    <div class="card" style="margin-right: 54%;max-width: 100%;margin-top: 15%;border: 2px dashed black;padding: 43px;">
+      <center><h1>LOGIN TO APPLY</h1>
+      <a href="index.html">Click to login</a>
+      </center>
+      </div>
+  </div>
+<footer id="fh5co-footer">
+      <div class="container">
+        <div class="row row-bottom-padded-md">
+          <div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+            <div class="fh5co-footer-widget">
+              <h3>Contact Us</h3>
+              <p>
+                <a href="mailto:ecelldtu@gmail.com">ecelldtu@gmail.com</a> <br>
+                Delhi Technological University, <br>
+                (DCE) New Delhi 110042 <br>
+                <a href="tel:+919718576076">+91 971 857 6076</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+            <div class="fh5co-footer-widget">
+              
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+            <div class="fh5co-footer-widget">
+              
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+            <div class="fh5co-footer-widget">
+              <h3>Follow Us</h3>
+              <ul class="fh5co-social">
+                <li><a href="http://www.twitter.com/ecelldtu"><i class="icon-twitter"></i></a></li>
+                <li><a href="http://www.facebook.com/ecelldtu"><i class="icon-facebook"></i></a></li>
+                <li><a href="http://www.plus.google.com/+ecelldtu"><i class="icon-google-plus"></i></a></li>
+                <li><a href="http://www.instagram.com/ecelldtu"><i class="icon-instagram"></i></a></li>
+                <li><a href="http://www.youtube.com/ecelldtu"><i class="icon-youtube-play"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+      <div class="fh5co-copyright animate-box">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p class="fh5co-left"><small>&copy; 2018 <a href="index.html">E-Cell</a> DTU. All Rights Reserved.</small></p>
+              <p class="fh5co-right"><small class="fh5co-right">Designed by <a href="http://fb.com/umang350" target="_blank">Umang Chauhan</a> </small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END #fh5co-footer -->
+  </div>
+  <!-- END #fh5co-page -->
+  
+  <!-- For demo purposes Only ( You may delete this anytime :-) -->
+  
+  <!-- End demo purposes only -->
+
+  
+
+
+  <!-- jQuery -->
+  <script src="js/jquery.min.js"></script>
+  <!-- jQuery Easing -->
+  <script src="js/jquery.easing.1.3.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Waypoints -->
+  <script src="js/jquery.waypoints.min.js"></script>
+  <!-- Flexslider -->
+  <script src="js/jquery.flexslider-min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/magnific-popup-options.js"></script>
+    
+  <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+  <!-- Contacts Store JavaScript -->
+  <script src="./script.js"></script>
+
+
+  <!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+  <script src="js/jquery.style.switcher.js"></script>
+  <script>
+    $(function(){
+      $('#colour-variations ul').styleSwitcher({
+        defaultThemeId: 'theme-switch',
+        hasPreview: false,
+        cookie: {
+                expires: 30,
+                isManagingLoad: true
+            }
+      }); 
+      $('.option-toggle').click(function() {
+        $('#colour-variations').toggleClass('sleep');
+      });
+    });
+  </script>
+  <!-- End demo purposes only -->
+
+  <!-- Main JS (Do not remove) -->
+  <script src="js/main.js"></script>
+
+  <!-- 
+  INFO:
+  jQuery Cookie for Demo Purposes Only. 
+  The code below is to toggle the layout to boxed or wide 
+  -->
+  <script src="js/jquery.cookie.js"></script>
+  <script>
+    
+    $(function(){
+
+      if ( $.cookie('layoutCookie') != '' ) {
+        $('body').addClass($.cookie('layoutCookie'));
+      }
+
+      $('a[data-layout="boxed"]').click(function(event){
+        event.preventDefault();
+        $.cookie('layoutCookie', 'boxed', { expires: 7, path: '/'});
+        $('body').addClass($.cookie('layoutCookie')); // the value is boxed.
+      });
+
+      $('a[data-layout="wide"]').click(function(event){
+        event.preventDefault();
+        $('body').removeClass($.cookie('layoutCookie')); // the value is boxed.
+        $.removeCookie('layoutCookie', { path: '/' }); // remove the value of our cookie 'layoutCookie'
+      });
+    });
+  </script>
+  
+
+  </body>
+</html>
+
